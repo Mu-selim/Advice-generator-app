@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Red+Hat+Display:wght@700;900&display=swap');
+
+:root {
+
+    /*Primary*/
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    /*Neutral*/
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+
+    --font-family1: 'Epilogue', sans-serif;
+    --font-family2: 'Red Hat Display', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Dark-Blue);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adviceBox {
+    position: relative;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 32px 60px 32px;
+    background-color: var(--Dark-Grayish-Blue);
+    border-radius: 12px;
+    gap: 16px;
+}
+
+.advice, advice * {
+    color: var(--Neon-Green);
+    font-size: 0.6em;
+    font-family: var(--font-family2);
+    letter-spacing: 2px;
+}
+
+.qoute {
+    text-align: center;
+    color: var(--Light-Cyan);
+    font-family: var(--font-family1);
+    font-family: var(--font-family2);
+    font-weight: 800;
+    font-size: 28px;
+}
+
+#patternDivider {
+    width: 100%;
+    object-fit: cover;
+}
+
+.buttonFetch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--Neon-Green);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin: 0 -26px;
+    bottom: -24px;
+    cursor: pointer;
+    transition: 0.3s all linear;
+}
+
+.buttonFetch:hover {
+    box-shadow: 0 0 16px 4px var(--Neon-Green);
+}
+
+@media screen and (max-width: 530px) {
+    .adviceBox {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .adviceBox {
+        margin: 0 12px;
+    }
+}
